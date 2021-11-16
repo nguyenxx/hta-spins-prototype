@@ -1,0 +1,1005 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $copy-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-variant: normal;
+    margin: 0;
+    word-wrap: break-word;
+    background-color: $bg;
+    color: $brown;
+}
+
+.center {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attachments {
+  display: block !important;
+}
+
+.caption p {
+   margin-top: 0 !important;
+   margin-bottom: 0 !important; 
+   padding-top: 0 !important;
+   padding-bottom: 0 !important;
+}
+
+h3  {
+   margin-bottom: 0 !important; 
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+a:link {
+    text-decoration: none;
+    color: $link-red;
+}
+
+a:visited {
+    color: $link-red;
+}
+
+a:active,
+a:hover {
+    color: lighten($link-red, 10%);
+}
+
+h1, h2, h3 {
+    font-family: $heading-font-family;
+}
+
+h4, h5, h6 {
+    font-family: $heading-font-family-small;
+}
+
+h1 {
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+}
+
+h2 {
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
+}
+
+h3 {
+    font-size: 1.125 * $base-font-size;
+    line-height: $base-line-height;
+}
+
+h4 {
+    font-size: $base-font-size;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#content,
+footer {
+    padding: $spacing-l;
+    overflow-x: hidden;
+}
+
+#content > h1:first-child {
+    position: relative;
+    margin: ($spacing-l) auto (2 * $spacing-l);
+    text-align: center;
+    width: auto;
+    padding: 0 0 $spacing-m 0;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 3 * $spacing-l;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        background-color: transparentize($brown, .8);
+    }
+}
+
+/* @group ----- Forms ----- */
+
+input,
+textarea,
+button,
+.button,
+select {
+    font-family: $heading-font-family-small;
+    font-size: .875 * $base-font-size;
+    line-height: $base-line-height;
+    margin: 0;
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea {
+    appearance: none;
+    border-radius: 0;
+    height: 1.25 * $spacing-l;
+    border: 1px solid $light;
+    padding: ($spacing-s - 1px) $spacing-s;
+    margin: 0;
+}
+
+textarea {
+    height: 3 * $spacing-l;
+}
+
+input[type="file"] {
+    line-height: 1;
+    vertical-align: bottom;
+    font-size: .75 * $base-font-size;
+}
+
+button,
+.button,
+a.button,
+[type="submit"] {
+    background-color: $link-red;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 $spacing-s;
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0;
+    cursor: pointer;
+}
+
+select {
+    background-color: #fff;
+    padding: .5 * $spacing-s;
+    border-color: $light;
+    height: $base-line-height;
+    border: 1px solid $gray;
+    font-size: .75 * $base-font-size;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-style: italic;
+}
+
+:-ms-input-placeholder {
+   font-style: italic;
+}
+
+.field {
+    margin: $spacing-l 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.browse-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  & > * {
+    margin: $spacing-s 0;
+  }
+  
+  button,
+  .button,
+  a.button {
+    padding: 0 $spacing-s;
+    font-size: .875 * $base-font-size;
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  
+  a.button:before,
+  .button:before {
+    padding: 0 $spacing-s;
+    line-height: 1.25 * $base-line-height; 
+  }
+  
+  .inactive.button {
+    background-color: $light;
+    color: #000;
+  }
+    
+  form {
+    margin-right: $spacing-m;
+  }
+  
+  .row-count {
+    margin-left: $spacing-m;
+  }
+}
+
+.field .field-meta {
+    width: 30%;
+    padding: $spacing-s $spacing-s 0 0;
+}
+
+.field .inputs {
+    width: 70%;
+      padding-left: $spacing-s;
+
+    & > select,
+    & > textarea,
+    & > input[type="text"],
+    & > input[type="password"],
+    & > input[type="email"],
+    & > input[type="url"] {
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        vertical-align: bottom;
+    }
+}
+
+.field.required .field-meta:after {
+    content: "\f069";
+    font-family: "Font Awesome 5 Free";
+    font-size: .75 * $base-font-size;
+}
+
+.field .value:not(:last-child) {
+    margin-bottom: $spacing-m;
+}
+
+.field-description {
+    font-size: .75 * $base-font-size;
+}
+
+
+
+/* @end */
+
+/* @group ----- Header ----- */
+
+
+#skipnav {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    background-color: #fff;
+    padding: $spacing-s;
+    display: inline-block;
+
+    &:focus {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+header {
+    font-size: .75 * $base-font-size;
+    padding: $spacing-l;
+    background-color: #fff;
+}
+
+header a {
+    color: #000 !important;
+}
+
+a.site-title {
+    display: block;
+}
+
+.site-title h1 {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: 0 0 $spacing-m;
+    text-align: center;
+}
+
+#search-form {
+    display: flex;
+    margin: $spacing-m 0;
+}
+
+#search-form input[type="text"] {
+    width: 100%;
+}
+
+#search-form button[type="submit"] {
+    height: 1.25 * $base-line-height;
+    width: 1.25 * $base-line-height;
+    text-indent: -9999px;
+    position: relative;
+    background-color: transparent;
+    color: $brown;
+    border-bottom: 1px solid $brown;
+
+    &:before {
+        content: "\f002";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-indent: 0;
+        line-height: 1.5 * $base-line-height;
+    }
+}
+
+::placeholder {
+    color: #fff;
+}
+
+header nav ul.navigation {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+    text-align: center;
+    font-family: $heading-font-family-small;
+}
+
+header nav ul.navigation > li > ul {
+    display: none;
+}
+
+/* @end */
+
+/* @group ----- Item/Show ----- */
+
+.item-head {
+    margin-bottom: $spacing-l;
+}
+
+.item-head h2 {
+    margin-bottom: 0;
+}
+
+.recording .role {
+    display: none;
+}
+
+.property .resource-link {
+    display: flex;
+    align-items: center;
+}
+
+.property .resource-link img {
+    height: 1.5 * $spacing-l;
+    width: auto;
+    margin: 0 $spacing-m 0 0;
+}
+
+.linked-resource h4 {
+    margin-bottom: $spacing-s;
+    text-transform: uppercase;
+    font-size: .875 * $base-font-size;
+}
+
+.linked-resource span {
+    width: 100%;
+    display: block;
+}
+
+.linked-resource .resource-link {
+    font-weight: bold;
+}
+
+.property-relation {
+    font-size: .75 * $base-font-size;
+}
+
+.property[data-term="dcterms:title"],
+.property[data-term="dcterms:description"] {
+    display: none;
+}
+
+.media-embeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    
+    iframe[src*="loc.gov"] {
+      padding: $spacing-l;
+      background-color: #fff;
+    }
+    
+    &.audio .media-render {
+      width: 100%;
+      margin: $spacing-l 0;
+    }
+    
+    iframe {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .media-render > p {
+      margin: 0;
+    }
+    
+    .media-render {
+      break-after: always;
+    }
+    
+   .media-render img {
+      max-height: 15 * $spacing-l;
+      margin: 0 0 $spacing-l 0;
+    }
+}
+
+.media-embeds .media-render:not(:only-child) {
+    max-width: calc(50% - #{$spacing-l});
+    margin: $spacing-m;
+}
+
+.property .value:not(:last-child) {
+    margin-bottom: $spacing-s;
+    border-bottom: 1px solid $gray;
+    padding-bottom: $spacing-s;
+}
+
+/* @end */
+
+/* @group ----- Home ----- */
+
+.home .spins .site-page {
+  background-color: #fff;
+}
+
+.home .spins .site-page .description {
+    padding: $spacing-m $spacing-l;
+}
+
+.home .spins .site-page .home-heading {
+    margin: 0;
+}
+
+.home .spins .page-link {
+  width: 100%;
+  display: block;
+}
+
+.home .spins .page-link img,
+.home .file .item.resource img {  
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.home .spins .site-page {
+  position: relative;
+  margin-bottom: $spacing-l;
+}
+
+.home .spins .heading {
+    position: absolute;
+    top: $spacing-m;
+    left: $spacing-m;
+    z-index: 6;
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: $spacing-s;
+}
+
+.home .spins .page-link-label {
+    padding: $spacing-m;
+    display: block;
+}
+
+.home.page .left.file .attachments .resource {
+  border: 1px solid #eee;
+  background-color: #fff;
+  margin-bottom: $spacing-l;
+
+  &:last-child {
+      border-right-width: 1px;
+  }
+
+  .caption {
+      padding: 0 $spacing-l;
+      text-align: left;
+  }
+
+  .caption p {
+      margin-top: 0;
+  }
+
+  img {
+      vertical-align: bottom;
+  }
+
+  .media-render {
+      position: relative;
+  }
+
+  .media-render:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: transparentize($pink, .8);
+  }
+
+  &:nth-child(2) .media-render:before {
+      background-color: transparentize($blue, .8);
+  }
+
+  &:nth-child(3) .media-render:before {
+      background-color: transparentize($green, .8);
+  }
+}
+
+.home.page .left.file h3 {
+  margin-top: $spacing-l;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-bottom: 0;
+}
+
+.home.page .left.file h3 a {
+  text-align: left;
+  padding: 0 $spacing-l;
+}
+
+.home.page .genres .site-page {
+  @include card;
+  margin-bottom: $spacing-l;
+  padding: 0;
+  
+  a {
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+  
+  img {
+    float: left;
+    width: 3 * $spacing-l;
+    height: auto;
+    margin-right: $spacing-m;
+  }
+  
+  .description {
+    display: inline-block;
+  }
+}
+
+.home.page .view-all.button a {
+  color: #fff !important;
+}
+
+.liner-notes-heading {
+  clear: both;
+}
+
+.liner-notes.site-pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  
+  .site-page {
+    list-style-type: none;
+    margin-left: 0;
+    background-color: #fff;
+    padding: $spacing-l;
+    margin-bottom: $spacing-l;
+    text-align: center;
+  }
+  
+  a {
+    font-family: $heading-font-family;
+    padding-bottom: $spacing-s;
+    margin-bottom: $spacing-s;
+    position: relative;
+    display: block;
+    
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      background-color: rgba(58,46,46,0.2);
+    }
+  }
+}
+
+/* @end */
+
+/* @group ----- Item/Show ----- */
+
+.attribution {
+  margin: 0 auto $spacing-l;
+}
+
+/* @end */
+
+/* @group ----- Item/Browse ----- */
+
+ul.resource-list .genres {
+    padding-left: 0;
+    list-style: none;
+    margin: (-$spacing-s) 0 0;
+}
+
+ul.resource-list .genres li {
+    width: auto;
+    font-size: .625 * $base-font-size;
+    line-height: .5 * $base-line-height;
+    font-family: $heading-font-family;
+    display: inline-block;
+    padding: 0;
+    text-transform: uppercase;
+
+    &:not(:last-child):after {
+        content: " // ";
+        color: #000;
+        display: inline-block;
+        margin: 0 (.5 * $spacing-s) 0 $spacing-s;
+    }
+}
+
+.item.browse .resource-link img,
+.preview-block .genres .resource-link img {
+    display: none;
+}
+
+/* @end */
+
+/* Artists and Songs */
+
+.page.artists .preview-block > a,
+.page.songs .preview-block > a {
+  display: none;
+}
+
+/* @group ----- Pages ----- */
+
+.break {
+  clear: both;
+  margin: $spacing-l 0;
+}
+
+.break.opaque {
+  border-top: 1px solid $brown;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.blocks > h2:first-child,
+.blocks > h2:first-child + h2 {
+    position: relative;
+    margin: ($spacing-l) auto (2 * $spacing-l);
+    text-align: center;
+    width: auto;
+    padding: 0 0 $spacing-m 0;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 3 * $spacing-l;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        background-color: transparentize($brown, .8);
+    }
+}
+
+.blocks > h2:first-child + h2 {
+    font-size: 2.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+
+    &:after {
+        content: none;
+    }
+}
+
+.breadcrumbs {
+    display: none;
+}
+
+.item-showcase .caption {
+  max-width: 900px;
+  padding: $spacing-m $spacing-l;
+  margin: auto;
+  background-color: transparentize($brown, .9);
+}
+
+.file a,
+.item-showcase a {
+    display: block;
+    width: 100%;
+}
+
+.item-showcase a {
+    text-align: center;
+}
+
+.item-showcase h3,
+.file h3 {
+    margin-top: 0;
+    font-size: .75 * $base-font-size;
+    line-height: $base-line-height;
+}
+
+ul.resource-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: $spacing-l 0;
+}
+
+ul.resource-list h4 {
+    margin: $spacing-s 0 0;
+    font-size: .75 * $base-font-size;
+}
+
+ul.resource-list span {
+    display: block;
+}
+
+ul.resource-list li {
+    margin-bottom: $spacing-l;
+}
+
+.site-page-pagination {
+    display: none;
+}
+
+[href*="loc.gov/jukebox/recordings"]:after {
+  content: url(../img/loc-icon.svg);
+  width: 12px;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+[href*="ucsb.edu/OBJID"]:after {
+  content: url(../img/ucsb-icon.svg);
+  width: 20px;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.file .attachments .resource {
+  break-after: always;
+}
+
+/* @end */
+
+/* @group ----- Trivia browse ----- */
+
+.spins.page .toc-block {
+    width: 100%;
+}
+
+.spins.page .blocks,
+.spins.page .toc-block .navigation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.spins.page .blocks h2 {
+    width: 100%;
+    max-width: none;
+}
+
+.spins.page .blocks p,
+.spins.page .blocks .toc-block li {
+    width: calc(100% - #{$spacing-l});
+    margin: 0 $spacing-m;
+    padding: 0 0 calc(100% - #{$spacing-l});
+    margin-bottom: $spacing-l;
+    font-family: $heading-font-family;
+    background-color: fade-out($pink, .7);
+    border-radius: 50%;
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        background-color: #fff;
+        border-radius: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        background-color: $bg;
+        border-radius: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &:nth-of-type(2n) {
+        background-color: fade-out($green, .7);
+    }
+
+    &:nth-of-type(3n) {
+        background-color: fade-out($blue, .7);
+    }
+
+    &:nth-of-type(5n) {
+        background-color: fade-out($yellow, .7);
+    }
+
+    &:nth-of-type(7n) {
+        background-color: fade-out($pink, .7);
+    }
+}
+
+.spins.page .blocks p a,
+.spins.page .blocks .toc-block li a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: $spacing-l;
+    z-index: 2;
+    color: $brown;
+    justify-content: center;
+}
+
+/* @end */
+
+/* @group ----- Genre browse ----- */
+
+.page.genres .blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page.genres .blocks > h2:first-child {
+    max-width: none;
+    width: 100%;
+}
+
+.page.genres .file .attachments {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page.genres .file .attachments .resource {
+    width: 50%;
+    break-after: avoid;
+}
+
+.page.genres .file .attachments img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.page.genres .genre {
+    background-color: #fff;
+    padding: 0 $spacing-l;
+    margin-top: $spacing-l;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.page.genres .genre > * {
+    max-width: 700px;
+}
+
+.page.genres .genre h3 {
+    margin-bottom: $spacing-s;
+}
+
+.page.genres .page-link-label {
+    font-size: 1.125 * $base-font-size;
+    line-height: $base-line-height;
+    font-family: $heading-font-family;
+    display: block;
+    margin-bottom: $spacing-l;
+}
+
+.page.genres .genre h3 + p {
+    margin-top: $spacing-s;
+}
+
+/* @end */
+
+.results {
+  margin: 0 auto $spacing-l;
+  max-width: 700px;
+}
+
+.results h2 {
+  margin-bottom: 0;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-s;
+  
+  li {
+    padding: $spacing-s 0;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+/* Liner Notes */
+
+.page.liner-notes .toc-block ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  li {
+    background-color: #fff;
+    padding: $spacing-l;
+    margin: $spacing-l (.5 * $spacing-l);
+    
+    a {
+      font-size: 1.125 * $base-font-size;
+      line-height: $base-line-height;
+      font-family: $heading-font-family;
+      display: block;
+    }
+  }
+}

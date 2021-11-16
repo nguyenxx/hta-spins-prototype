@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    /* https://www.w3schools.com/code/tryit.asp?filename=GVCDOR0QIZQJ */
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #eee9e0;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    @font-face {
+      font-family: myriadPro;
+      src: url(fonts/MYRIADPRO-BOLD.OTF);
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      padding-left: 30px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 300px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #ebd0c3;
+      color: #372e2e;
+      border-radius: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back {
+      /* background-color: #2980b9; */
+      /* background-image: url(img/listen-record.png); */
+      color: white;
+      transform: rotateY(180deg);
+      border-radius: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .records {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      font-family: myriadPro;
+      color: #372e2e;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-decoration: underline rgb(187, 187, 187);
+      text-decoration-thickness: 3px;
+      text-underline-position: under;
+    }
+
+    a {
+      width: 300px;
+      height: 300px;
+      border-radius: 300px;
+      font-family: myriadPro;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Spins</h1>
+  <!-- <h3>Hover over the record below:</h3> -->
+
+  <div class="records">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/pink-record3.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/listen-record4.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/yellpw-record3.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/tango1.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/star.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/gwj1.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/city.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/argentina.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="records">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/city.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/argentina.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/star.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/gwj1.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/pink-record3.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/listen-record4.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- <h1>How did recorded music transform listening?</h1>  -->
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/yellpw-record3.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+        </div>
+        <div class="flip-card-back">
+          <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze"><img src="img/tango1.png"
+              alt="Avatar" style="width:300px;height:300px;border-radius: 300px;z-index: -1;"></a>
+          <!-- <a href="https://hearingtheamericas.org/s/the-americas/page/q-dancecraze">Answer: It allowed people to listen in private</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
